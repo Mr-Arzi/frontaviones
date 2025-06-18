@@ -1,0 +1,57 @@
+.home-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.avion-card {
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.avion-card:hover {
+  transform: scale(1.01);
+}
+
+.avion-card img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .avion-card {
+    flex-direction: column;
+  }
+}
+
+
+.crear-publicacion {
+  text-align: right;
+  margin: 10px 0 20px;
+}
+
+.btn-publicar {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-publicar:hover {
+  background-color: #0056b3;
+}

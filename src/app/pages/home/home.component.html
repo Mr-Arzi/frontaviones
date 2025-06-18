@@ -1,0 +1,22 @@
+<div class="home-container">
+  <h2>Aviones publicados</h2>
+
+  <div *ngIf="isLogged" class="crear-publicacion">
+  <a routerLink="/new" class="btn-publicar">+ Nueva publicación</a>
+</div>
+
+
+  <div *ngIf="loading">Cargando aviones...</div>
+  <div *ngIf="error">{{ error }}</div>
+
+  <div *ngIf="aviones.length > 0">
+    <app-avion-card
+      *ngFor="let avion of aviones"
+      [avion]="avion">
+    </app-avion-card>
+  </div>
+
+  <div *ngIf="aviones.length === 0 && !loading">
+    No hay aviones publicados.
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="avion-card">
+  <img [src]="avion.urlFoto" alt="foto del avión" />
+  <div class="info">
+    <h3>{{ avion.nombre }}</h3>
+    <p>{{ avion.modelo }}</p>
+    <p><strong>Publicado por:</strong> {{ avion.postedBy }}</p>
+    <a [routerLink]="['/avion', avion.id]">Ver detalles</a>
+  </div>
+</div>

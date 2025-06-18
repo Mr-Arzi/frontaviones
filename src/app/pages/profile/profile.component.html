@@ -1,0 +1,15 @@
+<div class="profile-container">
+  <h2>Perfil de {{ username }}</h2>
+
+  <div *ngIf="!aviones">Cargando aviones...</div>
+
+  <div *ngIf="aviones.length === 0 && aviones">No ha publicado aviones aún.</div>
+
+<div class="aviones-grid">
+  <app-avion-card
+    *ngFor="let avion of aviones"
+    [avion]="avion">
+  </app-avion-card>
+</div>
+
+</div>

@@ -1,0 +1,35 @@
+<div *ngIf="avion; else cargando" class="post-detail">
+  <img [src]="avion.urlFoto" alt="foto" />
+  <h2>{{ avion.nombre }}</h2>
+  <p>{{ avion.modelo }}</p>
+  <p><strong>Publicado por:</strong> {{ avion.postedBy }}</p>
+
+  <hr />
+
+  <div class="reacciones">
+    <button (click)="enviarReaccion('LIKE')">👍 Me gusta</button>
+    <button (click)="enviarReaccion('LOVE')">❤️ Me encanta</button>
+
+    <div class="conteo">
+      <span *ngFor="let tipo of ['LIKE', 'LOVE']">
+  {{ tipo }}: {{ reaccionesContadas[tipo] || 0 }}
+</span>
+    </div>
+  </div>
+
+  <h3>Comentarios</h3>
+  <div *ngFor="let c of comentarios" class="comentario">
+    <strong>{{ c.autor?.username }}:</strong> {{ c.contenido }}
+  </div>
+
+  <div class="comentario-form">
+    <input [(ngModel)]="nuevoComentario" placeholder="Escribe un comentario..." />
+    <button (click)="enviarComentario()">Comentar</button>
+  </div>
+
+  <p *ngIf="error" class="error">{{ error }}</p>
+</div>
+
+<ng-template #cargando>
+  <p>Cargando publicación...</p>
+</ng-template>

@@ -1,0 +1,44 @@
+.avion-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.avion-card:hover {
+  transform: scale(1.01);
+}
+
+.avion-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 12px;
+}
+
+.info h3 {
+  margin: 0 0 5px;
+}
+
+.info p {
+  margin: 2px 0;
+}
+
+.info a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}

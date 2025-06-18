@@ -1,0 +1,45 @@
+.profile-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-container h2 {
+  margin-bottom: 20px;
+}
+
+.aviones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.avion-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.avion-card:hover {
+  transform: translateY(-5px);
+}
+
+.avion-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.avion-card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.avion-card p {
+  margin: 5px 0 0;
+  color: #555;
+}

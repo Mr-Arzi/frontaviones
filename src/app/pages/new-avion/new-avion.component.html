@@ -1,0 +1,17 @@
+<div class="form-container">
+  <h2>Publicar nuevo avión</h2>
+
+  <label>Nombre</label>
+  <input [(ngModel)]="avion.nombre" placeholder="Nombre del avión" required />
+
+  <label>Modelo</label>
+  <input [(ngModel)]="avion.modelo" placeholder="Modelo" required />
+
+  <label>URL de la imagen</label>
+  <input [(ngModel)]="avion.urlFoto" placeholder="URL de la imagen" required />
+
+  <button (click)="publicar()">Publicar</button>
+
+  <p *ngIf="mensaje" class="success">{{ mensaje }}</p>
+  <p *ngIf="error" class="error">{{ error }}</p>
+</div>
