@@ -7,5 +7,5 @@ RUN npm run build --prod
 
 # Etapa de producción
 FROM nginx:alpine
-COPY --from=build /app/dist/aviongram /usr/share/nginx/html
+COPY --from=build /app/dist/aviongram/browser /usr/share/nginx/html
 EXPOSE 80
